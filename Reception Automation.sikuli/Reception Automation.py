@@ -4,7 +4,7 @@ totalSlides = 0
 totalSeconds = 0
 
 def setupMenu():
-    choice = input("Is the solar information already visible in Google chrome? (yes or no)")
+    choice = input("Would you like to run setup to open the solar information and presentation?")
     if choice == "yes":
         getInfo()
         openPpt()
