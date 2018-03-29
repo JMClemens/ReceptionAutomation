@@ -83,6 +83,7 @@ totalSeconds = <span class="dig">0</span>
         openPpt()
         eventLoop()
     <span class="kw">else</span>:
+        getInfo()
         eventLoop()
 
 
@@ -104,7 +105,9 @@ totalSeconds = <span class="dig">0</span>
         <span class="skw">click</span>(<img src="1516897487308.png" />)
 
 <span class="kw">def</span> displaySolar():
-    <span class="kw">pass</span>
+    <span class="skw">find</span>(<img src="1522343518597.png" />)
+    <span class="skw">click</span>(<img src="1522343518597.png" />)
+
 
 <span class="kw">def</span> getInfo():
     <span class="kw">global</span> totalSlides
@@ -128,11 +131,11 @@ totalSeconds = <span class="dig">0</span>
     <span class="skw">click</span>(<img src="1516900428029.png" />)
     <span class="skw">find</span>(<img src="1522336725815.png" />)
     <span class="skw">doubleClick</span>(<img src="1522336725815.png" />)
-
-    playPpt()
+    time.<span class="skw">sleep</span>(<span class="dig">15</span>)
 
 <span class="kw">def</span> playPpt():
-    time.<span class="skw">sleep</span>(<span class="dig">15</span>)
+    <span class="skw">find</span>(<img src="1522343613002.png" />)
+    <span class="skw">click</span>(<img src="1522343613002.png" />)
     <span class="skw">find</span>(<img src="1516900871740.png" />)
     <span class="skw">doubleClick</span>(<img src="1516900876773.png" />)
     <span class="skw">find</span>(<img src="1516900921661.png" />)
@@ -152,10 +155,11 @@ totalSeconds = <span class="dig">0</span>
         <span class="kw">else</span>:
             time.<span class="skw">sleep</span>(<span class="dig">5</span>)
             <span class="skw">click</span>(Location(<span class="dig">1583</span>, <span class="dig">16</span>))
-
+    <span class="skw">type</span>(Key.ESC)
 
 <span class="kw">def</span> eventLoop():
-    <span class="kw">pass</span>
+    displaySolar()
+    playPpt()
 
 setupMenu()
 </pre>

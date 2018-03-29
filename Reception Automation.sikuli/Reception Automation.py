@@ -11,6 +11,7 @@ def setupMenu():
         openPpt()
         eventLoop()
     else:
+        getInfo()
         eventLoop()
             
 
@@ -32,7 +33,9 @@ def solarLogin():
         click("1516897487308.png")
 
 def displaySolar():
-    pass
+    find("1522343518597.png")
+    click("1522343518597.png")
+    
 
 def getInfo():
     global totalSlides
@@ -56,11 +59,11 @@ def openPpt():
     click("1516900428029.png")
     find("1522336725815.png") 
     doubleClick("1522336725815.png")
-
-    playPpt()
+    time.sleep(15)
     
 def playPpt():
-    time.sleep(15)
+    find("1522343613002.png")
+    click("1522343613002.png")
     find("1516900871740.png")
     doubleClick("1516900876773.png")
     find("1516900921661.png")
@@ -80,10 +83,11 @@ def playPpt():
         else:
             time.sleep(5)
             click(Location(1583, 16))
-        
+    type(Key.ESC)
 
 def eventLoop():
-    pass
+    displaySolar()
+    playPpt()
 
 setupMenu()
 
