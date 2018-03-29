@@ -3,6 +3,7 @@ A simple automation script for the reception display at Bernard Brown Community 
 
 # Dependencies
 Java (Scripts are written in Jython) - http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
 Sikulix & it's dependencies - http://sikulix.com/
 
 # Author
