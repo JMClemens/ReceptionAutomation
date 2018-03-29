@@ -4,7 +4,7 @@ totalSlides = 0
 totalSeconds = 0
 
 def setupMenu():
-    choice = input("Would you like to run setup to open the solar information and presentation?")
+    choice = input("Would you like to run setup to open the solar information and presentation? (yes/no)")
     if choice == "yes":
         solarLogin()
         getInfo()
@@ -21,12 +21,15 @@ def solarLogin():
     find("1517422027763.png")
     click("1517422027763.png")
     type(r'https://monitoring.solaredge.com/solaredge-web/p/login' + Key.ENTER)
-    time.sleep(5)
-    find("1516897428437.png")
-    click("1516897435753.png")
-    type(r'bbccsolar@gmail.com' + Key.TAB + r'bbccsolar1')
-    find("1516897482185.png")
-    click("1516897487308.png")
+    time.sleep(10)
+    if exists("1522338023333.png"):
+        pass
+    else:
+        find("1516897428437.png")
+        click("1516897435753.png")
+        type(r'bbccsolar@gmail.com' + Key.TAB + r'bbccsolar1')
+        find("1516897482185.png")
+        click("1516897487308.png")
 
 def displaySolar():
     pass
@@ -57,7 +60,7 @@ def openPpt():
     playPpt()
     
 def playPpt():
-    time.sleep(20)
+    time.sleep(15)
     find("1516900871740.png")
     doubleClick("1516900876773.png")
     find("1516900921661.png")
@@ -67,31 +70,16 @@ def playPpt():
     tSlides = totalSlides
     global totalSeconds
     tSecs = totalSeconds
-    cntrl = False 
-    print(s)
-    print("total slides" + str(tSlides))
-    print("total seconds" + str(tSecs))
-    while not cntrl:
-        if s == tSlides:
-            print("if stmt")
-            cntrl = True
-            type(Key.ESC)
-            break;
-        elif exists("1517425162535.png"):
-            print("elif stmt")
+    for i in tSlides:
+        if exists("1517425162535.png"):
             hover(Location(800, 459))
             find("1517424868409.png")
             click(Pattern("1517424868409.png").targetOffset(-2,2))
             time.sleep(tSecs)
             click(Location(1583, 16))
-            s = s + 1
-            print(s)
         else:
-            print("else stmt")
             time.sleep(5)
             click(Location(1583, 16))
-            s = s + 1
-            print(s)
         
 
 def eventLoop():

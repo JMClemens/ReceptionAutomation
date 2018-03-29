@@ -76,7 +76,7 @@ totalSlides = <span class="dig">0</span>
 totalSeconds = <span class="dig">0</span>
 
 <span class="kw">def</span> setupMenu():
-    choice = <span class="skw">input</span>(<span class="str">"Would you like to run setup to open the solar information and presentation?"</span>)
+    choice = <span class="skw">input</span>(<span class="str">"Would you like to run setup to open the solar information and presentation? (yes/no)"</span>)
     <span class="kw">if</span> choice == <span class="str">"yes"</span>:
         solarLogin()
         getInfo()
@@ -93,12 +93,15 @@ totalSeconds = <span class="dig">0</span>
     <span class="skw">find</span>(<img src="1517422027763.png" />)
     <span class="skw">click</span>(<img src="1517422027763.png" />)
     <span class="skw">type</span>(<span class="str">r'https://monitoring.solaredge.com/solaredge-web/p/login'</span> + Key.ENTER)
-    time.<span class="skw">sleep</span>(<span class="dig">5</span>)
-    <span class="skw">find</span>(<img src="1516897428437.png" />)
-    <span class="skw">click</span>(<img src="1516897435753.png" />)
-    <span class="skw">type</span>(<span class="str">r'bbccsolar@gmail.com'</span> + Key.TAB + <span class="str">r'bbccsolar1'</span>)
-    <span class="skw">find</span>(<img src="1516897482185.png" />)
-    <span class="skw">click</span>(<img src="1516897487308.png" />)
+    time.<span class="skw">sleep</span>(<span class="dig">10</span>)
+    <span class="kw">if</span> exists(<img src="1522338023333.png" />):
+        <span class="kw">pass</span>
+    <span class="kw">else</span>:
+        <span class="skw">find</span>(<img src="1516897428437.png" />)
+        <span class="skw">click</span>(<img src="1516897435753.png" />)
+        <span class="skw">type</span>(<span class="str">r'bbccsolar@gmail.com'</span> + Key.TAB + <span class="str">r'bbccsolar1'</span>)
+        <span class="skw">find</span>(<img src="1516897482185.png" />)
+        <span class="skw">click</span>(<img src="1516897487308.png" />)
 
 <span class="kw">def</span> displaySolar():
     <span class="kw">pass</span>
@@ -129,7 +132,7 @@ totalSeconds = <span class="dig">0</span>
     playPpt()
 
 <span class="kw">def</span> playPpt():
-    time.<span class="skw">sleep</span>(<span class="dig">20</span>)
+    time.<span class="skw">sleep</span>(<span class="dig">15</span>)
     <span class="skw">find</span>(<img src="1516900871740.png" />)
     <span class="skw">doubleClick</span>(<img src="1516900876773.png" />)
     <span class="skw">find</span>(<img src="1516900921661.png" />)
@@ -139,31 +142,16 @@ totalSeconds = <span class="dig">0</span>
     tSlides = totalSlides
     <span class="kw">global</span> totalSeconds
     tSecs = totalSeconds
-    cntrl = False
-    <span class="kw">print</span>(s)
-    <span class="kw">print</span>(<span class="str">"total slides"</span> + str(tSlides))
-    <span class="kw">print</span>(<span class="str">"total seconds"</span> + str(tSecs))
-    <span class="kw">while</span> <span class="kw">not</span> cntrl:
-        <span class="kw">if</span> s == tSlides:
-            <span class="kw">print</span>(<span class="str">"if stmt"</span>)
-            cntrl = True
-            <span class="skw">type</span>(Key.ESC)
-            <span class="kw">break</span>;
-        <span class="kw">elif</span> exists(<img src="1517425162535.png" />):
-            <span class="kw">print</span>(<span class="str">"elif stmt"</span>)
+    <span class="kw">for</span> i <span class="kw">in</span> tSlides:
+        <span class="kw">if</span> exists(<img src="1517425162535.png" />):
             hover(Location(<span class="dig">800</span>, <span class="dig">459</span>))
             <span class="skw">find</span>(<img src="1517424868409.png" />)
             <span class="skw">click</span>(Pattern(<img src="1517424868409.png" />).targetOffset(-<span class="dig">2</span>,<span class="dig">2</span>))
             time.<span class="skw">sleep</span>(tSecs)
             <span class="skw">click</span>(Location(<span class="dig">1583</span>, <span class="dig">16</span>))
-            s = s + <span class="dig">1</span>
-            <span class="kw">print</span>(s)
         <span class="kw">else</span>:
-            <span class="kw">print</span>(<span class="str">"else stmt"</span>)
             time.<span class="skw">sleep</span>(<span class="dig">5</span>)
             <span class="skw">click</span>(Location(<span class="dig">1583</span>, <span class="dig">16</span>))
-            s = s + <span class="dig">1</span>
-            <span class="kw">print</span>(s)
 
 
 <span class="kw">def</span> eventLoop():
