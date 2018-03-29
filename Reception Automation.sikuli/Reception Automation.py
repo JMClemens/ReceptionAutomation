@@ -35,6 +35,8 @@ def solarLogin():
 def displaySolar():
     find("1522343518597.png")
     click("1522343518597.png")
+    dragDrop("1522347796170.png", "1522347805115.png")
+    
     
 
 def getInfo():
@@ -68,10 +70,9 @@ def playPpt():
     doubleClick("1516900876773.png")
     find("1516900921661.png")
     click("1516900988964.png")
-    s = 1 
     global totalSlides
-    tSlides = int(totalSlides)
     global totalSeconds
+    tSlides = int(totalSlides)
     tSecs = totalSeconds
     for i in range(tSlides):
         if exists("1517425162535.png"):
@@ -86,8 +87,9 @@ def playPpt():
     type(Key.ESC)
 
 def eventLoop():
-    displaySolar()
-    playPpt()
+    while true:
+        displaySolar()
+        playPpt()
 
 setupMenu()
 

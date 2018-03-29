@@ -107,6 +107,8 @@ totalSeconds = <span class="dig">0</span>
 <span class="kw">def</span> displaySolar():
     <span class="skw">find</span>(<img src="1522343518597.png" />)
     <span class="skw">click</span>(<img src="1522343518597.png" />)
+    <span class="skw">dragDrop</span>(<img src="1522347796170.png" />, <img src="1522347805115.png" />)
+
 
 
 <span class="kw">def</span> getInfo():
@@ -140,10 +142,9 @@ totalSeconds = <span class="dig">0</span>
     <span class="skw">doubleClick</span>(<img src="1516900876773.png" />)
     <span class="skw">find</span>(<img src="1516900921661.png" />)
     <span class="skw">click</span>(<img src="1516900988964.png" />)
-    s = <span class="dig">1</span>
     <span class="kw">global</span> totalSlides
-    tSlides = int(totalSlides)
     <span class="kw">global</span> totalSeconds
+    tSlides = int(totalSlides)
     tSecs = totalSeconds
     <span class="kw">for</span> i <span class="kw">in</span> range(tSlides):
         <span class="kw">if</span> exists(<img src="1517425162535.png" />):
@@ -158,8 +159,9 @@ totalSeconds = <span class="dig">0</span>
     <span class="skw">type</span>(Key.ESC)
 
 <span class="kw">def</span> eventLoop():
-    displaySolar()
-    playPpt()
+    <span class="kw">while</span> true:
+        displaySolar()
+        playPpt()
 
 setupMenu()
 </pre>
