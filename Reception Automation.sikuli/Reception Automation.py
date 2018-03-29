@@ -51,13 +51,13 @@ def openPpt():
     click("1516900394563.png")
     find("1516900419643.png")
     click("1516900428029.png")
-    find("1516900600748.png")
-    doubleClick(Pattern("1516900610548.png").targetOffset(-3,-32))
+    find("1522336725815.png") 
+    doubleClick("1522336725815.png")
 
     playPpt()
     
 def playPpt():
-    time.sleep(5)
+    time.sleep(20)
     find("1516900871740.png")
     doubleClick("1516900876773.png")
     find("1516900921661.png")
