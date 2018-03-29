@@ -139,10 +139,10 @@ totalSeconds = <span class="dig">0</span>
     <span class="skw">click</span>(<img src="1516900988964.png" />)
     s = <span class="dig">1</span>
     <span class="kw">global</span> totalSlides
-    tSlides = totalSlides
+    tSlides = int(totalSlides)
     <span class="kw">global</span> totalSeconds
     tSecs = totalSeconds
-    <span class="kw">for</span> i <span class="kw">in</span> tSlides:
+    <span class="kw">for</span> i <span class="kw">in</span> range(tSlides):
         <span class="kw">if</span> exists(<img src="1517425162535.png" />):
             hover(Location(<span class="dig">800</span>, <span class="dig">459</span>))
             <span class="skw">find</span>(<img src="1517424868409.png" />)

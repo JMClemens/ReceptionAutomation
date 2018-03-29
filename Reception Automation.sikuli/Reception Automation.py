@@ -67,10 +67,10 @@ def playPpt():
     click("1516900988964.png")
     s = 1 
     global totalSlides
-    tSlides = totalSlides
+    tSlides = int(totalSlides)
     global totalSeconds
     tSecs = totalSeconds
-    for i in tSlides:
+    for i in range(tSlides):
         if exists("1517425162535.png"):
             hover(Location(800, 459))
             find("1517424868409.png")
