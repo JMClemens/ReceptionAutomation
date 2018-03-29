@@ -6,13 +6,11 @@ totalSeconds = 0
 def setupMenu():
     choice = input("Would you like to run setup to open the solar information and presentation?")
     if choice == "yes":
+        solarLogin()
         getInfo()
         openPpt()
         eventLoop()
     else:
-        solarLogin()
-        getInfo()
-        openPpt()
         eventLoop()
             
 
